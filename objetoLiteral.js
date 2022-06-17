@@ -2,7 +2,7 @@ const user = {
     nome: "Juliana",
     email: "j@j.com",
     nascimento: "2021/01/01",
-    role: "admin",
+    role: "estudante",
     ativo: true,
 
     exibirInfo: function () {
@@ -12,14 +12,31 @@ const user = {
 }
 
 
+const admin = {
+    nome: "Mariana",
+    email: "mariana@email.com",
+    role: "admin",
+    ativo: true,
+
+    criarCurso: function () {
+        console.log("Curso criado")
+    }
+}
+
+
 // user.exibirInfo()
 
 const exibir = function () {
     console.log(`nome: ${this.nome}, email: ${this.email}`)
 }
 
-exibir()
+// exibir()
 
-const exibirInfos = exibir.bind(user)
+// const exibirInfos = exibir.bind(user)
 
-exibirInfos()
+// exibirInfos()
+
+
+Object.setPrototypeOf(admin, user)
+admin.criarCurso()
+admin.exibirInfo()
