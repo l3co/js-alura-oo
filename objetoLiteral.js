@@ -12,4 +12,14 @@ const user = {
 }
 
 
-user.exibirInfo()
+// user.exibirInfo()
+
+const exibir = function () {
+    console.log(`nome: ${this.nome}, email: ${this.email}`)
+}
+
+exibir()
+
+const exibirInfos = exibir.bind(user)
+
+exibirInfos()
