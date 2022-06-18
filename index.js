@@ -11,4 +11,6 @@ console.log("Admin ", admin.nome);
 const docente = new Docente("Rita de Cassia", "r@c.com", "1986-04-23");
 console.log("Docente  ", docente.nome);
 
+docente.nome = "Rita Barbosa"
+console.log("Docente  ", docente.nome);
 
