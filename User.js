@@ -12,6 +12,22 @@ export default class User {
         this.#ativo = ativo
     }
 
+    get nome() {
+        return this.#nome;
+    }
+
+    get email() {
+        return this.#email;
+    }
+
+    get nascimento() {
+        return this.#nascimento;
+    }
+
+    get ativo() {
+        return this.#ativo;
+    }
+
     exibirInfo() {
         return `${this.#nome}, ${this.email}`
     }
